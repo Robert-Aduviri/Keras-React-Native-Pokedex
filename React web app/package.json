@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "start": "node neural-net.js", // && node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch"
   },
@@ -40,5 +40,8 @@
     "redux": "^3.0.4",
     "request": "^2.81.0",
     "sharp": "^0.18.2"
+  },
+  "engines": {
+    "node": "7.4.4"
   }
 }

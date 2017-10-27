@@ -19,6 +19,7 @@ class App extends Component {
   }
 
   predictImage(url) {
+    this.setState({buttonText: '...'});
     return fetch('http://localhost:3000/predict', {
       method: 'POST',
       headers: {
@@ -53,7 +54,8 @@ class App extends Component {
           <img src={this.state.imageUrl} />
         </div>
         <div className="button-container">
-          <a className="waves-effect deep-orange accent-3 btn-large" onClick={() => this.predictImage(this.state.imageUrl)}>{this.state.buttonText}</a>
+          <a className="waves-effect deep-orange accent-3 btn-large" 
+             onClick={() => this.predictImage(this.state.imageUrl)}>{this.state.buttonText}</a>
         </div>
       </div>
     );
